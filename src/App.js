@@ -1,14 +1,14 @@
-import React from 'react'; // we are adding the react library into our App component
+import React from "react"; // we are adding the react library into our App component
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from './component/Header';
-import Main from './component/Main';
-import Footer from './component/Footer';
+import Header from "./component/Header";
+import Main from "./component/Main";
+import Footer from "./component/Footer";
 class App extends React.Component {
   render() {
     return (
       <div>
         <Header />
-        <Main />
+        <Main/>
         <Footer />
       </div>
     );
