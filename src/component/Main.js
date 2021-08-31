@@ -1,24 +1,24 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import jsondata from "../assets/data.json";
+import data from '../assets/data.json'
+import SelectedBeast from './SelectedBeast';
+
 class Main extends React.Component {
-    filling() {
-        return jsondata.map((data) => {
-          return (
-            <HornedBeasts
-              img={data.image_url}
-              describtion={data.description}
-              title={data.title}
-            />
-          );
-        });
-      }
+
+    
     render() {
         return (
-            <main>
-               <>{this.filling()} </>
-            </main>
-        )
+          
+            <div className='cardDiv'>
+                <SelectedBeast/>
+                {data.map((element,index) => {
+                    return (<HornedBeasts title={element.title} url={element.image_url} description={element.description} key={index}/>
+                    );
+                })}
+
+            </div>
+        );
+
     }
 }
 export default Main;
