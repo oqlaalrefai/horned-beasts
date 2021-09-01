@@ -8,7 +8,7 @@ class SelectedBeast extends React.Component {
 
     render() {
         return (
-            <>
+            <div>
                 <Modal show={this.props.show} onHide={this.props.show}>
                     <Modal.Header closeButton>
                         <Modal.Title>{this.props.title}</Modal.Title>
@@ -21,7 +21,7 @@ class SelectedBeast extends React.Component {
                         </Button>
                     </Modal.Footer>
                 </Modal>
-            </>
+            </div>
         )
     }
 }

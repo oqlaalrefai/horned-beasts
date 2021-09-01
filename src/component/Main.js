@@ -9,10 +9,11 @@ class Main extends React.Component {
     render() {
         return (
           
-            <div className='cardDiv'>
+            <div>
                 <SelectedBeast/>
                 {data.map((element,index) => {
-                    return (<HornedBeasts title={element.title} url={element.image_url} description={element.description} key={index}/>
+                    return (
+                    <HornedBeasts title={element.title} url={element.image_url} description={element.description} key={index}/>
                     );
                 })}
 

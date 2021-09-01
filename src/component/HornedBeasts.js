@@ -34,10 +34,10 @@ class HornedBeasts extends React.Component {
 
     render() {
         return (
-            <>
-                
-                    {/* <Card.Img onClick={this.increaseVotes} variant="top" src={this.props.url} /> */}
-                <SelectedBeast show={this.state.show} changeState={this.changeState} title={this.props.title} description={this.props.description} url={this.props.url}></SelectedBeast>
+            
+                <div>
+
+                <SelectedBeast show={this.state.show} changeState={this.changeState} title={this.props.title} description={this.props.description} url={this.props.url}/>
                 <Card style={{ width: '18rem' }} onClick={this.changeState}>
                     <Card.Img variant="top" onClick={this.increaseVotes} src={this.props.url} />
                     <Card.Body>
@@ -51,7 +51,7 @@ class HornedBeasts extends React.Component {
                     </Card.Body>
                 </Card>
                 <Button onClick={this.increaseVotes}>Vote</Button>
-            </>
+                </div>
         )
     }}
     export default HornedBeasts;
