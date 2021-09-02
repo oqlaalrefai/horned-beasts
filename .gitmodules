@@ -1,0 +1,3 @@
+[submodule "themes/vx-hugo"] 
+  path = themes/vx-hugo 
+  url = https://github.com/themefisher/vx-hugo.git
