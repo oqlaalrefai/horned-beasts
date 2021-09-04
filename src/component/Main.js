@@ -1,24 +1,30 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import jsondata from "../assets/data.json";
+
+
 class Main extends React.Component {
-    filling() {
-        return jsondata.map((data) => {
-          return (
-            <HornedBeasts
-              img={data.image_url}
-              describtion={data.description}
-              title={data.title}
-            />
-          );
-        });
-      }
-    render() {
-        return (
-            <main>
-               <>{this.filling()} </>
-            </main>
-        )
-    }
+
+  render() {
+    return (
+      <main>
+          {
+            this.props.HornedData.map((selectedBeastItem) => {
+              return (
+                <HornedBeasts
+                  imageUrl={selectedBeastItem.image_url}
+                  title={selectedBeastItem.title}
+                  description={selectedBeastItem.description}
+                  keyword={selectedBeastItem.keyword}
+                  horns={selectedBeastItem.horns}
+                  displayModal={this.props.displayModal}
+                />
+              )
+            })
+          }
+
+      </main>
+    )
+  }
 }
+
 export default Main;
