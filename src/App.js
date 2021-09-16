@@ -1,3 +1,11 @@
+
+import React from "react"; // we are adding the react library into our App component
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import data from './assets/data.json'
+import SelectedBeast from './component/SelectedBeast';
+import HornedBeasts from './component/HornedBeasts';
+
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './component/Header';
@@ -6,6 +14,7 @@ import Footer from './component/Footer';
 import HornedData from './assets/data.json';
 import Forms from './component/Form'
 import SelectedBeast from './component/SelectedBeast';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -32,6 +41,17 @@ hornes = ()=>{if(HornedData.hornes === this.numhornes){console.log(this.hornes);
   render() {
     return (
       <div>
+
+      <SelectedBeast/>
+      {data.map((element,index) => {
+          return (
+          <HornedBeasts title={element.title} url={element.image_url} description={element.description} key={index}/>
+          );
+      })}
+    </div>
+
+    );
+
         <Header />
         <Forms />
         <Main  HornedData={HornedData} displayModal={this.displayModal}  />
@@ -43,6 +63,7 @@ hornes = ()=>{if(HornedData.hornes === this.numhornes){console.log(this.hornes);
         <Footer />
       </div>
     )
+
   }
 }
 export default App;

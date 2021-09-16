@@ -43,7 +43,11 @@ class HornedBeasts extends React.Component {
                             votes =  {this.state.votes}❤️
                         </Card.Text>
                         <Card.Text>
+
+                            {this.state.numberOFvotes} ❤️
+
                             {this.props.description}
+
                         </Card.Text>
                     </Card.Body>
                 </Card>

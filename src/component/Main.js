@@ -1,8 +1,29 @@
 import React from 'react';
+
+import Main from "./component/Main";
+import Footer from "./component/Footer";
+import App from '../App';
+// import data from '../assets/data.json'
+
 import HornedBeasts from './HornedBeasts';
 
 
+
 class Main extends React.Component {
+
+
+    
+    render() {
+        return (
+           
+            <div>
+              <Header />
+              <App />
+              <Footer />
+            </div>
+            
+        )
+}
 
   render() {
     return (
@@ -35,6 +56,7 @@ class Main extends React.Component {
             </main>
         )
     }
+
 
 }
 
