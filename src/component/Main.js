@@ -1,10 +1,17 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
+
+
 class Main extends React.Component {
-    render() {
-        return (
-            <main>
+
+  render() {
+    return (
+      <main>
+          {
+            this.props.HornedData.map((selectedBeastItem) => {
+              return (
                 <HornedBeasts
+
                     title="UniWhal"
                     imageUrl="http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg"
                     description="A unicorn and a narwhal nuzzling their horns"
@@ -30,5 +37,22 @@ class Main extends React.Component {
             </main>
         )
     }
+
+                  imageUrl={selectedBeastItem.image_url}
+                  title={selectedBeastItem.title}
+                  description={selectedBeastItem.description}
+                  keyword={selectedBeastItem.keyword}
+                  horns={selectedBeastItem.horns}
+                  displayModal={this.props.displayModal}
+                />
+              )
+            })
+          }
+
+      </main>
+    )
+  }
+
 }
+
 export default Main;
