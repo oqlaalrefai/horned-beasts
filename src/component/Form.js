@@ -1,20 +1,27 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
-class Forms extends React.Component {
+import { Form } from "react-bootstrap";
+
+class FormClass extends React.Component {
   render() {
     return (
-      
-      <div>
-        <Form.Select aria-label="Default select example">
-          <option onChange={this.props.numhornes}>select the number of horns</option>
-          <option value="100">100</option>
-          <option value="3">3</option>
-          <option value="2">2</option>
-          <option value="1">1</option>
-        </Form.Select>
-        <br/>
-      </div>
-    )
+      <>
+        <Form>
+          <Form.Label>Filter By Horns:</Form.Label>
+          <Form.Select
+            aria-label="Default select example"
+            id="hornSelect"
+            onChange={this.props.handleChange}
+          >
+            <option value="0">All</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="100">one hundred</option>
+          </Form.Select>
+        </Form>
+      </>
+    );
   }
 }
-export default Forms;
+
+export default FormClass;

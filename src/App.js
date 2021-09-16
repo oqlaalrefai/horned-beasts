@@ -1,48 +1,43 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './component/Header';
-import Main from './component/Main';
-import Footer from './component/Footer';
-import HornedData from './assets/data.json';
-import Forms from './component/Form'
-import SelectedBeast from './component/SelectedBeast';
+import Header from "./component/Header";
+import Main from "./component/Main";
+import Footer from "./component/Footer";
+import React from 'react'
+import "./App.css";
+import Data from "./assets/data.json";
+import SelectedBeast from "./component/SelectedBeast";
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super();
     this.state = {
-      selectedBeast: HornedData,
-      showModel: false,
-      numhornes:0
-    }
+      show: false,
+      img: '',
+      name: '',
+      desc: '',
+    };
   }
-hornes = ()=>{if(HornedData.hornes === this.numhornes){console.log(this.hornes);return 1;}
-
+  showSelectedBeast = (imgUrl, _name, description) => {
     this.setState({
-      showModel: true,
-      selectedBeast: this.hornes,
-    })
-  }
-  closeModal = () => {
+      show: true,
+      img: imgUrl,
+      name: _name,
+      desc: description,
+    });
+  };
+  hideSelectedBeast = () => {
     this.setState({
-      showModel: false
-    })
-  }
-
+      show: false,
+    });
+  };
   render() {
     return (
-      <div>
+      <>
         <Header />
-        <Forms />
-        <Main  HornedData={HornedData} displayModal={this.displayModal}  />
-        <SelectedBeast
-          selectedBeast={this.state.selectedBeast}
-          show={this.state.showModel}
-          close={this.closeModal}
-        />
+        <Main dataFile={Data} showModal={this.showSelectedBeast} />
+        <SelectedBeast hideModal={this.hideSelectedBeast} show={this.state.show} img={this.state.img} name={this.state.name} desc={this.state.desc}/>
         <Footer />
-      </div>
-    )
+      </>
+    );
   }
 }
 export default App;
