@@ -95,7 +95,12 @@ Estimate of time needed to complete: __1:30___
 
 Start time: __1:30 pm___
 
-Finish time: __5:30pm___
+Finish time: __5:45pm___
 
 Actual time needed to complete: __2 hours___
 
+<<<<<<< HEAD
+
+finished
+=======
+>>>>>>> da6c879270d70e689a266dd8f81729ef14bc8c89
