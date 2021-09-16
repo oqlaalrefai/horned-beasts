@@ -2,6 +2,20 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 class HornedBeasts extends React.Component {
 
+  render() {
+    console.log('props: ', this.props);
+    return (
+      <div>
+        <h2>{this.props.title}</h2>
+        <p>{this.props.description}</p>
+        <img src={this.props.imageUrl} alt="" />
+        <p>{this.props.keyword}</p>
+        <p>{this.props.horns}</p>
+      </div>
+    )
+  }
+
+
     constructor(props) {
         super(props);
         this.state = {
@@ -36,5 +50,6 @@ class HornedBeasts extends React.Component {
             </div>
         )
     }
+
 }
 export default HornedBeasts;
