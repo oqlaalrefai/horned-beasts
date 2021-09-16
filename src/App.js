@@ -1,26 +1,12 @@
 
-import Header from "./component/Header";
-import Main from "./component/Main";
-import Footer from "./component/Footer";
-import React from 'react'
 import "./App.css";
 import Data from "./assets/data.json";
-import SelectedBeast from "./component/SelectedBeast";
-
-
-import React from "react"; // we are adding the react library into our App component
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import data from './assets/data.json'
-import SelectedBeast from './component/SelectedBeast';
 import HornedBeasts from './component/HornedBeasts';
-
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './component/Header';
 import Main from './component/Main';
 import Footer from './component/Footer';
-import HornedData from './assets/data.json';
 import Forms from './component/Form'
 import SelectedBeast from './component/SelectedBeast';
 
