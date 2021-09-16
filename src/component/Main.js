@@ -1,3 +1,8 @@
+
+import React from "react";
+import HornedBeast from "./HornedBeasts";
+import Form from "./Form";
+
 import React from 'react';
 
 import Main from "./component/Main";
@@ -9,7 +14,20 @@ import HornedBeasts from './HornedBeasts';
 
 
 
+
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filtereddata: 0,
+    };
+  }
+  handleChange = (event) => {
+    event.preventDefault();
+    this.setState({
+      filtereddata: parseInt(event.target.value),
+    });
+  };
 
 
     
@@ -27,6 +45,40 @@ class Main extends React.Component {
 
   render() {
     return (
+
+      <>
+        <main>
+          <Form handleChange={this.handleChange} />
+          <br />
+            {this.props.dataFile.map((item) => {
+              if (this.state.filtereddata === 0) {
+                return (
+                  <HornedBeast
+                    title={item.title}
+                    imageURL={item.image_url}
+                    description={item.description}
+                    showModal={this.props.showModal}
+                    horns={item.horns}
+                  />
+                );
+              } else if (parseInt(item.horns) === this.state.filtereddata) {
+                return (
+                  <HornedBeast
+                    title={item.title}
+                    imageURL={item.image_url}
+                    description={item.description}
+                    showModal={this.props.showModal}
+                    horns={item.horns}
+                  />
+                );
+              }
+            })}
+
+        </main>
+      </>
+    );
+  }
+
       <main>
 
                 <HornedBeasts
@@ -59,5 +111,4 @@ class Main extends React.Component {
 
 
 }
-
 export default Main;
