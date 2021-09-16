@@ -49,7 +49,7 @@ class App extends React.Component {
       })}
     </div>
 
-    );
+   
 
         <Header />
         <Main dataFile={Data} showModal={this.showSelectedBeast} />
@@ -59,8 +59,7 @@ class App extends React.Component {
       </>
     );
 
-      </div>
-    )
+
 
 
   }
