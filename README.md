@@ -79,6 +79,15 @@ Finish time: __5:30 pm___
 
 Actual time needed to complete: __2 hours___
 
+Number and name of feature: __________lab3______________________
+
+Estimate of time needed to complete: ___3hours__
+
+Start time: __2pm___
+
+Finish time: ___5pm__
+
+Actual time needed to complete: __2hours___
 
 Number and name of feature: __ 3 pass function as props__
 
