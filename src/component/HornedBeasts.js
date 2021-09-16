@@ -14,36 +14,6 @@ class HornedBeast extends React.Component {
     this.setState({
       favorites: this.state.favorites + 1,
     });
-    console.log(this.state.favorites);
-  };
-  sendData = () => {
-    this.props.showModal(this.props.imageURL,this.props.title, this.props.description);
-  };
-  render() {
-    return (
-      <>
-        <Col>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img
-              variant="top"
-              src={this.props.imageURL}
-              onClick={this.increaseFavorites}
-            />
-            <Card.Body>
-              <Card.Title>{this.props.title}</Card.Title>
-              <Card.Text>{this.props.description}</Card.Text>
-              <Card.Text>Horns: {this.props.horns}</Card.Text>
-              <Card.Text>Favorites❤️: {this.state.favorites}</Card.Text>
-              <Button variant="primary" onClick={this.sendData}>
-                View Details
-              </Button>
-            </Card.Body>
-          </Card>
-        </Col>
-      </>
-    );
-  }
-
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 class HornedBeasts extends React.Component {
