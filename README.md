@@ -69,7 +69,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-Number and name of feature: __3 pass function as props__
+Number and name of feature: React State and Props
+
+Estimate of time needed to complete: __2 hours___
+
+Start time: __2:00 pm___
+
+Finish time: __5:30 pm___
+
+Actual time needed to complete: __2 hours___
+
+Number and name of feature: __________lab3______________________
+
+Estimate of time needed to complete: ___3hours__
+
+Start time: __2pm___
+
+Finish time: ___5pm__
+
+Actual time needed to complete: __2hours___
+
+Number and name of feature: __ 3 pass function as props__
 
 Estimate of time needed to complete: __1:30___
 
@@ -79,5 +99,8 @@ Finish time: __5:45pm___
 
 Actual time needed to complete: __2 hours___
 
+<<<<<<< HEAD
 
 finished
+=======
+>>>>>>> da6c879270d70e689a266dd8f81729ef14bc8c89
