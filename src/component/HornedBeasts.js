@@ -43,4 +43,4 @@ class HornedBeast extends React.Component {
       </>
     );
   }
-
+}
