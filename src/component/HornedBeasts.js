@@ -14,63 +14,33 @@ class HornedBeast extends React.Component {
     this.setState({
       favorites: this.state.favorites + 1,
     });
-import React from 'react';
-import Card from 'react-bootstrap/Card';
-class HornedBeasts extends React.Component {
-
+    console.log(this.state.favorites);
+  };
+  sendData = () => {
+    this.props.showModal(this.props.imageURL,this.props.title, this.props.description);
+  };
   render() {
-    console.log('props: ', this.props);
     return (
-      <div>
-        <h2>{this.props.title}</h2>
-        <p>{this.props.description}</p>
-        <img src={this.props.imageUrl} alt="" />
-        <p>{this.props.keyword}</p>
-        <p>{this.props.horns}</p>
-      </div>
-    )
+      <>
+        <Col>
+          <Card style={{ width: "18rem" }}>
+            <Card.Img
+              variant="top"
+              src={this.props.imageURL}
+              onClick={this.increaseFavorites}
+            />
+            <Card.Body>
+              <Card.Title>{this.props.title}</Card.Title>
+              <Card.Text>{this.props.description}</Card.Text>
+              <Card.Text>Horns: {this.props.horns}</Card.Text>
+              <Card.Text>votes❤️: {this.state.favorites}</Card.Text>
+              <Button variant="primary" onClick={this.sendData}>
+                View Details
+              </Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      </>
+    );
   }
 
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            votes: 0
-        }
-    }
-
-    incrementNumberOfPets = () => {
-        this.setState({
-            votes: this.state.votes + 1
-        })
-    }
-    displayModal = () => {
-        this.props.displayModal(this.props.title)
-    }
-
-    render() {
-        return (
-            <div>
-                <Card style={{ width: '18rem' }} onClick={this.displayModal}>
-                    <Card.Img variant="top" src={this.props.imageUrl} onClick={this.incrementNumberOfPets} />
-                    <Card.Body>
-                        <Card.Title>{this.props.title}</Card.Title>
-                        <Card.Text>
-                            votes =  {this.state.votes}❤️
-                        </Card.Text>
-                        <Card.Text>
-
-                            {this.state.numberOFvotes} ❤️
-
-                            {this.props.description}
-
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-            </div>
-        )
-    }
-
-
-}
-export default HornedBeast;
