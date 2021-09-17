@@ -36,7 +36,12 @@ class Main extends React.Component {
                     horns={item.horns}
                   />
                 );
-              } else if (parseInt(item.horns) === this.state.filtereddata) {
+              } 
+              else 
+              {return(<></>)}
+              })}
+            {this.props.dataFile.map((item) => {
+              if (parseInt(item.horns) === this.state.filtereddata) {
                 return (
                   <HornedBeast
                     title={item.title}
@@ -46,7 +51,9 @@ class Main extends React.Component {
                     horns={item.horns}
                   />
                 );
+              
               }
+              else{return(<></>)}
             })}
 
         </main>
